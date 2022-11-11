@@ -3,7 +3,6 @@
 /vendor
 vendor
 node_modules
-README.md
 
 # DEFINITION
 /app/Includes/definition.php
