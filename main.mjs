@@ -45,7 +45,7 @@ export default class App {
 
 	createPage() {
 		this.page = new Home();
-		this.page.create()
+		this.page.create();
 	}
 
 

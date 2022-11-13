@@ -14,7 +14,7 @@
 	<meta property="og:title" content="we know you. | nerdweb" />
 	<meta property='og:site_name' content='we know you. | nerdweb'>
 	<meta property="og:image" content="/shared/_og.jpg" />
-	<meta property='og:image:secure_url' content='/shared/_og.jpg'>
+	<meta property='og:image:secure_url' content='./shared/_og.jpg'>
 	<meta property='og:image:type' content='png'>
 	<meta property='og:image:alt' content='A Nerdweb é uma agência de marketing digital em Curitiba que presta serviços de marketing, tecnologia e conteúdo focados em negócios para gerar resultados.'>
 	<meta property="og:url" content="https://nerdweb.com.br" />
@@ -25,7 +25,7 @@
 	<meta name='twitter:description'
 		content='A Nerdweb é uma agência de marketing digital em Curitiba que presta serviços de marketing, tecnologia e conteúdo focados em negócios para gerar resultados.'>
 	<meta name='twitter:card' content='summary'>
-	<meta name='twitter:image' content='/shared/_og.jpg'>
+	<meta name='twitter:image' content='./shared/_og.jpg'>
 	<meta name='twitter:image:alt'
 		content='A Nerdweb é uma agência de marketing digital em Curitiba que presta serviços de marketing, tecnologia e conteúdo focados em negócios para gerar resultados.'>
 
@@ -37,26 +37,457 @@
 	<meta name='apple-mobile-web-app-capable' content='yes'>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-	<link rel="shortcut icon" href="/shared/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="./shared/favicon.ico" type="image/x-icon">
 
-	<link rel="preload" type='text/css' href="/style.css" as="style" />
-	<link rel="stylesheet" href="/style.css" />
+	<link rel="preload" type='text/css' href="./style.css" as="style" />
+	<link rel="stylesheet" href="./style.css" />
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;900&family=Sora:wght@400;700;800&display=swap&display=swap" rel="stylesheet">
 
 	<title>we know you. | nerdweb</title>
 </head>
 
 <body>
-	<header></header>
-	<footer></footer>
+	<header>
+		<div class="wrapper">
+			<nav class="header__navigation">
+				<figure class="header__navigation__logo">
+					<a href="#">
+						<img src="./assets/header_logo.png" alt="Logo NerdWeb" title="Acessar nossa página inicial">
+					</a>
+				</figure>
+
+				<ul class="header__navigation__links">
+					<li class="header__navigation__link">
+						<a href="#">
+							Nerdweb
+						</a>
+					</li>
+					<li class="header__navigation__link">
+						<a href="#">
+							Serviços
+						</a>
+					</li>
+					<li class="header__navigation__link">
+						<a href="#">
+							Blog
+						</a>
+					</li>
+					<li class="header__navigation__link">
+						<a href="#">
+							Atendimento
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="header__actions">
+				<button class="header__actions__dropdown">
+					<span>DIA A DIA</span>
+				</button>
+
+				<button class="header__actions__button">
+					<figure class="header__actions__button__icon">
+						<img src="./assets/header_icon-user.svg" alt="Ícone de Usuário">
+					</figure>
+				</button>
+
+				<button class="header__actions__button">
+					<figure class="header__actions__button__icon">
+						<img src="./assets/header_icon-cart.svg" alt="Ícone de carrinho">
+					</figure>
+				</button>
+
+				<button class="header__actions__button-mobile">
+					<figure class="header__actions__button__icon">
+						<i class="fa-solid fa-bars"></i>
+					</figure>
+				</button>
+			</div>
+
+		</div>
+	</header>
+
+
+	<section class="navigation-bar">
+		<div class="wrapper">
+			<nav class="navigation-bar__links">
+				<ul class="navigation-bar__links__list">
+					<li class="navigation-bar__link">
+						<button class="navigation-bar__link__menu">
+							<span>SITES</span>
+						</button>
+					</li>
+					<li class="navigation-bar__link">
+						<a href="#">REDES SOCIAIS</a>
+					</li>
+					<li class="navigation-bar__link">
+						<a href="#">E-COMMERCE</a>
+					</li>
+					<li class="navigation-bar__link">
+						<a href="#">MÍDIA ONLINE</a>
+					</li>
+					<li class="navigation-bar__link">
+						<a href="#">LANDING PAGES</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="navigation-bar__search">
+				<label class="navigation-bar__search__label">
+					<input type="text" name="search-input" id="search-input" class="navigation-bar__search__input" placeholder="Digite sua pesquisa">
+				</label>
+			</div>
+
+			<div class="navigation-bar__menu">
+				<ul class="navigation-bar__menu__links">
+					<li class="navigation-bar__menu__links__title">
+						<strong>Soluções<br> Site</strong>
+					</li>
+
+					<li class="navigation-bar__menu__links__link">
+						<a href="#">Briefing</a>
+					</li>
+					<li class="navigation-bar__menu__links__link">
+						<a href="#">Pesquisa</a>
+					</li>
+					<li class="navigation-bar__menu__links__link">
+						<a href="#">Criação</a>
+					</li>
+					<li class="navigation-bar__menu__links__link">
+						<a href="#">Veiculação</a>
+					</li>
+				</ul>
+				<ul class="navigation-bar__menu__links">
+					<li class="navigation-bar__menu__links__title">
+						<strong>Soluções por E-commerce</strong>
+					</li>
+
+					<li class="navigation-bar__menu__links__link">
+						<a href="#">Lorem</a>
+					</li>
+					<li class="navigation-bar__menu__links__link">
+						<a href="#">Ipsum</a>
+					</li>
+					<li class="navigation-bar__menu__links__link">
+						<a href="#">Dolor</a>
+					</li>
+					<li class="navigation-bar__menu__links__link">
+						<a href="#">Google ads</a>
+					</li>
+					<li class="navigation-bar__menu__links__link">
+						<a href="#">Análise de mercado</a>
+					</li>
+				</ul>
+				<ul class="navigation-bar__menu__links">
+					<li class="navigation-bar__menu__links__title">
+						<strong>Soluções por Redes Sociais</strong>
+					</li>
+
+					<li class="navigation-bar__menu__links__link">
+						<a href="#">Briefing</a>
+					</li>
+					<li class="navigation-bar__menu__links__link">
+						<a href="#">Pesquisa</a>
+					</li>
+					<li class="navigation-bar__menu__links__link">
+						<a href="#">Criação</a>
+					</li>
+					<li class="navigation-bar__menu__links__link">
+						<a href="#">Veiculação</a>
+					</li>
+				</ul>
+				<ul class="navigation-bar__menu__links">
+					<li class="navigation-bar__menu__links__title">
+						<strong>Soluções por Landing Page</strong>
+					</li>
+
+					<li class="navigation-bar__menu__links__link">
+						<a href="#">Conteúdo</a>
+					</li>
+					<li class="navigation-bar__menu__links__link">
+						<a href="#">Relatórios</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<div class="hero">
+		<picture class="hero__banner" width="100%">
+			<source media="(min-width: 730px)" width="100%" srcset="/assets/hero_banner.png" />
+			<img src="./assets/hero_banner-mobile.png" width="100%" alt="Imagem principal do site">
+		</picture>
+	</div>
+
+	<section class="services">
+		<div class="wrapper">
+			<div class="services__content">
+				<h2>
+					Descubra os serviços Nerdweb <i>que mais combinam com a sua empresa</i>
+				</h2>
+
+				<a href="#" type="button" class="services__content__redirect">VER SERVIÇOS</a>
+			</div>
+
+			<div class="services__slide">
+				<div class="services__slide__action">
+					<button class="services__slide__action__previous">
+						
+					</button>
+					<button class="services__slide__action__next">
+						
+					</button>
+				</div>
+
+				<div class="services__slide__wrapper">
+					<div class="services__slide__card">
+						<picture class="services__slide__card__picture">
+							<img src="./assets/services_icon-route.svg" alt="Imagem dos nossos serviços">
+						</picture>
+
+						<strong class="services__slide__card__title">
+							Título
+						</strong>
+
+						<p class="services__slide__card__text">
+							Dolor sit amet, consetetur sadipscing elitr, sed
+						</p>
+					</div>
+					<div class="services__slide__card">
+						<picture class="services__slide__card__picture">
+							<img src="./assets/services_icon-headset.svg" alt="Imagem dos nossos serviços">
+						</picture>
+
+						<strong class="services__slide__card__title">
+							Serviço
+						</strong>
+
+						<p class="services__slide__card__text">
+							Dolor sit amet, consetetur sadipscing elitr, sed
+						</p>
+					</div>
+					<div class="services__slide__card">
+						<picture class="services__slide__card__picture">
+							<img src="./assets/services_icon-clipboard.svg" alt="Imagem dos nossos serviços">
+						</picture>
+
+						<strong class="services__slide__card__title">
+							Exemplo
+						</strong>
+
+						<p class="services__slide__card__text">
+							Dolor sit amet, consetetur sadipscing elitr, sed
+						</p>
+					</div>
+
+
+					<div class="services__slide__card">
+						<picture class="services__slide__card__picture">
+							<img src="./assets/services_icon-route.svg" alt="Imagem dos nossos serviços">
+						</picture>
+
+						<strong class="services__slide__card__title">
+							Título
+						</strong>
+
+						<p class="services__slide__card__text">
+							Dolor sit amet, consetetur sadipscing elitr, sed
+						</p>
+					</div>
+					<div class="services__slide__card">
+						<picture class="services__slide__card__picture">
+							<img src="./assets/services_icon-headset.svg" alt="Imagem dos nossos serviços">
+						</picture>
+
+						<strong class="services__slide__card__title">
+							Serviço
+						</strong>
+
+						<p class="services__slide__card__text">
+							Dolor sit amet, consetetur sadipscing elitr, sed
+						</p>
+					</div>
+					<div class="services__slide__card">
+						<picture class="services__slide__card__picture">
+							<img src="./assets/services_icon-clipboard.svg" alt="Imagem dos nossos serviços">
+						</picture>
+
+						<strong class="services__slide__card__title">
+							Exemplo
+						</strong>
+
+						<p class="services__slide__card__text">
+							Dolor sit amet, consetetur sadipscing elitr, sed
+						</p>
+					</div>
+
+
+					<div class="services__slide__card">
+						<picture class="services__slide__card__picture">
+							<img src="./assets/services_icon-route.svg" alt="Imagem dos nossos serviços">
+						</picture>
+
+						<strong class="services__slide__card__title">
+							Título
+						</strong>
+
+						<p class="services__slide__card__text">
+							Dolor sit amet, consetetur sadipscing elitr, sed
+						</p>
+					</div>
+					<div class="services__slide__card">
+						<picture class="services__slide__card__picture">
+							<img src="./assets/services_icon-headset.svg" alt="Imagem dos nossos serviços">
+						</picture>
+
+						<strong class="services__slide__card__title">
+							Serviço
+						</strong>
+
+						<p class="services__slide__card__text">
+							Dolor sit amet, consetetur sadipscing elitr, sed
+						</p>
+					</div>
+					<div class="services__slide__card">
+						<picture class="services__slide__card__picture">
+							<img src="./assets/services_icon-clipboard.svg" alt="Imagem dos nossos serviços">
+						</picture>
+
+						<strong class="services__slide__card__title">
+							Exemplo
+						</strong>
+
+						<p class="services__slide__card__text">
+							Dolor sit amet, consetetur sadipscing elitr, sed
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="wrapper">
+			<div class="footer__upper">
+				<div class="footer__uppper__logo">
+					<picture class="footer__uppper__logo__image">
+						<a href="/" title="Acessar a página inicial">
+							<img src="./assets/footer_logo.png" alt="Logo NerdWeb">
+						</a>
+					</picture>
+				</div>
+
+				<nav class="footer__upper__navigation">
+					<ul class="footer__upper__navigation__links">
+						<li class="footer__upper__navigation__link-title">
+							NERDWEB
+						</li>
+
+						<li class="footer__upper__navigation__link">
+							<a href="#">Sobre</a>
+						</li>
+						<li class="footer__upper__navigation__link">
+							<a href="#">Nossos Princípios</a>
+						</li>
+						<li class="footer__upper__navigation__link">
+							<a href="#">Funcionários</a>
+						</li>
+						<li class="footer__upper__navigation__link">
+							<a href="#">Trabalhe Conosco</a>
+						</li>
+					</ul>
+
+					<ul class="footer__upper__navigation__links">
+						<li class="footer__upper__navigation__link-title">
+							AJUDA
+						</li>
+
+						<li class="footer__upper__navigation__link">
+							<a href="#">Prazos e Entregas</a>
+						</li>
+						<li class="footer__upper__navigation__link">
+							<a href="#">Troca e Devoluções</a>
+						</li>
+						<li class="footer__upper__navigation__link">
+							<a href="#">Políticas de Privacidade</a>
+						</li>
+					</ul>
+
+
+					<ul class="footer__upper__navigation__links">
+						<li class="footer__upper__navigation__link-title">
+							ATENDIMENTO
+						</li>
+
+						<li class="footer__upper__navigation__link">
+							<a href="#">Dúvidas Frequentes</a>
+						</li>
+						<li class="footer__upper__navigation__link">
+							<a href="tel:4133333333">(41) 3333-3333</a>
+						</li>
+						<li class="footer__upper__navigation__link">
+							<a href="mailto:teste@nerdweb.com.br">teste@nerdweb.com.br</a>
+						</li>
+					</ul>
+
+					<div class="footer__upper__navigation__info">
+						<strong class="footer__upper__navigation__info__title">
+							HORÁRIO DE ATENDIMENTO
+						</strong>
+
+						<p class="footer__upper__navigation__info__text">
+							De segunda a sexta-feira<br>
+							das 08h00 às 12h00 e<br>
+							das 13h00 às 17h40
+						</p>
+					</div>
+
+				</nav>
+			</div>
+
+			<div class="footer__bottom">
+				<div class="footer__bottom__copyright">
+					<span>2022 Nerdweb - Extreme Hosting, todos os direitos reservados.</span>
+				</div>
+
+				<div class="footer__bottom__socials">
+					<strong class="footer__bottom__socials__title">
+						Fique em sintonia com a gente
+					</strong>
+
+					<ul class="footer__bottom__socials__links">
+						<li class="footer__bottom__socials__link">
+							<a href="#" class="fa-brands fa-facebook">
+							</a>
+						</li>
+						<li class="footer__bottom__socials__link">
+							<a href="#" class="fa-brands fa-instagram">
+							</a>
+						</li>
+						<li class="footer__bottom__socials__link">
+							<a href="#" class="fa-brands fa-linkedin-in">
+							</a>
+						</li>
+						<li class="footer__bottom__socials__link">
+							<a href="#" class="fa-brands fa-twitter">
+							</a>
+						</li>
+						<li class="footer__bottom__socials__link">
+							<a href="#" class="fa-brands fa-youtube">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
 
 	<script src="https://kit.fontawesome.com/8b74899bef.js" crossorigin="anonymous"></script>
-	<script src="/scripts/vendors/greensock.min.js"></script>
-	<script src="/scripts/vendors/lodash.min.js"></script>
-	<script type="module" src="/main.mjs"></script>
+	<script src="./scripts/vendors/greensock.min.js"></script>
+	<script src="./scripts/vendors/lodash.min.js"></script>
+	<script type="module" src="./main.mjs"></script>
 </body>
 
 </html>

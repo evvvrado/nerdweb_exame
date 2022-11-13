@@ -1,0 +1,171 @@
+.services {
+	@include padding-y(7rem);
+	border-top: 0.3rem solid $color-malibu;
+
+	.wrapper {
+		@include flex(row, flex-start, space-between);
+	}
+
+	&__content {
+		max-width: 36rem;
+		width: 100%;
+		position: relative;
+		margin-top: 4.8rem;
+
+		h2 {
+			max-width: 31.2rem;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			right: 0;
+			top: 0;
+
+			background: url("./assets/services_border.png");
+			background-size: auto 100%;
+			background-position: center center;
+
+			width: 15px;
+			height: 316px;
+		}
+
+		&__redirect {
+			@extend %button-primary;
+			margin-top: 4.2rem;
+		}
+	}
+
+	&__slide {
+		width: 100%;
+		max-width: 91rem;
+
+		overflow: hidden;
+		padding-top: 1rem;
+		padding-bottom: 2rem;
+		padding-left: 5rem;
+
+		scroll-behavior: smooth;
+		scroll-snap-type: x mandatory;
+
+		&__action {
+			@include flex(row, center, flex-start, 2rem);
+			margin-bottom: 2.4rem;
+
+			position: sticky;
+			left: 0;
+			top: 0;
+
+			button {
+				@extend %center;
+				height: 2.4rem;
+				width: 2.4rem;
+				background-color: #f3f3f3;
+
+				font-family: "Font Awesome 5 Free";
+				font-weight: 900;
+				border-radius: 100%;
+
+				transition: 0.32s;
+
+				&:hover {
+					transform: scale(1.2);
+					background-color: $color-bandi-blue;
+					color: $color-white;
+				}
+			}
+		}
+
+		&__wrapper {
+			width: max-content;
+			// padding-right: 4rem;
+
+			@include flex(row, center, flex-start, 2.4rem);
+		}
+
+		&__card {
+			@include flex(column, center, center, 1.1rem);
+
+			scroll-snap-align: start;
+
+			width: 28.4rem;
+			height: 31.6rem;
+			background-color: $color-white;
+			box-shadow: 0.1rem 0.3rem 1rem #{$color-black}00014;
+
+			transition: 0.32s;
+
+			text-align: center;
+			font-family: $font-primary;
+			color: $color-hunter-green;
+
+			&__title {
+				font-size: 1.6rem;
+				font-weight: 900;
+			}
+			&__text {
+				max-width: 22.3rem;
+				font-weight: 600;
+				font-size: 1.5rem;
+			}
+
+			&:hover {
+				transform: scale(1.01);
+				cursor: default;
+			}
+		}
+	}
+
+	@include media("<=tablet") {
+		&__content {
+			max-width: 42rem;
+		}
+		&__slide {
+			max-width: 61rem;
+		}
+	}
+	@include media("<=sm_tablet") {
+		&__content {
+			max-width: 37rem;
+		}
+
+		&__slide {
+			max-width: 30rem;
+		}
+	}
+
+	@include media("<=md_phone") {
+		@include padding-y(2.4rem);
+
+		.wrapper {
+			@include flex(column, center, center, 2.4rem);
+		}
+
+		&__content {
+			max-width: 24.8rem;
+			text-align: center;
+			margin-top: 0;
+
+			h2 {
+				max-width: 24.8rem;
+			}
+
+			&::after {
+				position: static;
+				display: block;
+				width: 138px;
+				height: 15px;
+				display: none;
+			}
+		}
+
+		&__slide {
+			max-width: 30rem;
+
+			&__action {
+				align-items: center;
+				justify-content: center;
+			}
+		}
+	}
+}

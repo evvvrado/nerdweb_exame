@@ -1,22 +1,125 @@
 header {
 	z-index: z("header");
-
 	width: 100%;
+	background-color: $color-white;
 	position: fixed;
 	top: 0;
 	left: 0;
 	transition: 0.3s;
+	height: 6.2rem;
 
-	&[data-position="hide"] {
-		top: -5rem;
+	border-bottom: 0.3rem solid $color-malibu;
+
+	.wrapper {
+		@include flex(row, center, space-between);
+		height: 100%;
+
+		.header__navigation {
+			@include flex(row, center, flex-start, 5.9rem);
+
+			&__logo {
+				transition: 0.32s;
+
+				&:hover {
+					transform: scale(1.05);
+				}
+
+				animation: bottom-fade-in 1 0.32s linear;
+				animation-fill-mode: backwards;
+			}
+
+			&__links {
+				@include flex(row, center, flex-start, 2.5rem);
+
+				animation: bottom-fade-in 1 0.32s linear 0.05s;
+				animation-fill-mode: backwards;
+			}
+
+			&__link {
+				@extend %anchor-effect;
+
+				font-family: $font-secondary;
+				color: $color-heavy-metal;
+				font-size: 1.4rem;
+			}
+		}
+
+		.header__actions {
+			@include flex(row, center, flex-end, 3rem);
+
+			animation: bottom-fade-in 1 0.32s linear;
+			animation-fill-mode: backwards;
+
+			&__dropdown {
+				position: relative;
+
+				font-family: $font-secondary;
+				font-weight: bold;
+				font-size: 1.2rem;
+				color: $color-black;
+				text-transform: uppercase;
+
+				transition: 0.32s;
+
+				&::after {
+					content: "\f0d7";
+					padding-left: 0.5rem;
+					font-family: "Font Awesome 5 Free";
+					font-weight: 900;
+					display: inline-block;
+				}
+
+				&:hover {
+					opacity: 0.6;
+				}
+			}
+
+			&__button {
+				@extend %anchor-effect;
+
+				position: relative;
+				height: 3.2rem;
+				width: 3.2rem;
+				aspect-ratio: 1/1;
+
+				transition: 0.32s;
+				border-radius: 100%;
+
+				@include flex(row, center, center);
+
+				&-mobile {
+					display: none;
+					font-size: 2.1rem;
+				}
+			}
+		}
 	}
 
-	&[data-position="reduced"] {
-		color: $color-cod-gray;
-		background: $color-gallery;
-	}
+	@include media("<=sm_tablet") {
+		height: 4.6rem;
 
-	&::-webkit-scrollbar {
-		display: none;
+		.wrapper {
+			.header__navigation {
+				&__links {
+					display: none;
+				}
+			}
+			.header__actions {
+				gap: 1.6rem;
+
+				&__button {
+					width: 2.4rem;
+					height: 2.4rem;
+				}
+
+				&__dropdown {
+					display: none;
+				}
+
+				&__button-mobile {
+					display: inherit;
+				}
+			}
+		}
 	}
 }

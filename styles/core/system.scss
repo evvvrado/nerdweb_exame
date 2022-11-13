@@ -1,0 +1,67 @@
+%anchor-effect {
+	position: relative;
+	line-height: 100%;
+	transition: 0.32s;
+
+	&::after {
+		position: absolute;
+		content: "";
+
+		left: 0;
+		bottom: 0;
+		transform: translateY(200%);
+		height: 3px;
+		width: 0;
+		border-radius: 15px;
+		background-color: $color-bandi-blue;
+
+		transition: 0.32s;
+	}
+
+	&:hover {
+		// transform: scale(1.05);
+		font-weight: bold;
+	}
+
+	&:hover::after {
+		width: 100%;
+	}
+}
+
+%button-primary {
+	--font-color: #{$color-blue-whale};
+	padding: 0.9rem 4.1rem;
+	display: inline-block;
+
+	background-color: $color-malibu;
+
+	font-family: $font-primary;
+	font-weight: bolder;
+
+	font-size: 1.4rem;
+	color: var(--font-color);
+	text-transform: uppercase;
+
+	position: relative;
+	transition: 0.32s;
+
+	&:hover {
+		filter: brightness(1.1);
+
+		&::before {
+			width: 2.1rem;
+		}
+	}
+
+	&::before {
+		content: "";
+		position: static;
+		display: inline-block;
+		width: 0;
+		height: 0.1rem;
+		margin-bottom: 0.4rem;
+		margin-right: 0.4rem;
+		background-color: var(--font-color);
+		transition: 0.32s;
+	}
+}

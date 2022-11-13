@@ -1,0 +1,170 @@
+.navigation-bar {
+	height: 7.1rem;
+	margin-top: 6.2rem;
+	background-color: $color-blue-whale;
+
+	.wrapper {
+		position: relative;
+		animation: bottom-fade-in 1 0.32s linear 0.06s;
+		animation-fill-mode: backwards;
+
+		@include flex(row, center, space-between);
+		height: 100%;
+	}
+
+	&__menu {
+		@include flex(row, flex-start, center);
+		position: absolute;
+		background-color: $color-white;
+		left: 0;
+		bottom: 0;
+		opacity: 0;
+		transform: translateY(120%);
+
+		width: 100%;
+		min-height: 27rem;
+		padding-top: 3.2rem;
+		font-family: "Sora", sans-serif;
+		pointer-events: none;
+
+		transition: 0.32s;
+
+		&__links {
+			width: 14rem;
+			margin-right: 14.3rem;
+
+			&__title {
+				font-size: 1.8rem;
+				font-weight: 800;
+				color: $color-regal-blue;
+				padding-bottom: 1.2rem;
+				border-bottom: 1px solid $color-french-gray;
+				margin-bottom: 1.2rem;
+			}
+
+			&__link {
+				font-size: 1.4rem;
+				color: $color-tuna;
+				margin-bottom: 0.8rem;
+				transition: 0.32s;
+				transform: translateY(10px);
+				transition-delay: 0.2s;
+				opacity: 0;
+
+				&:hover {
+					filter: brightness(1.1);
+				}
+			}
+
+			&:first-child {
+				.navigation-bar__menu__links__link {
+					font-weight: 600;
+				}
+			}
+		}
+
+		&.show {
+			opacity: 1;
+			transform: translateY(100%);
+
+			.navigation-bar__menu__links__link {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+
+		@include media("<=tablet") {
+			&__links {
+				margin-right: auto;
+				margin-left: auto;
+			}
+		}
+	}
+
+	&__links {
+		&__list {
+			@include flex(row, center, flex-start, 3.4rem);
+		}
+	}
+
+	&__link {
+		@extend %anchor-effect;
+
+		color: $color-white;
+		font-family: $font-secondary;
+		font-size: 1.4rem;
+
+		&__menu {
+			position: relative;
+
+			&::after {
+				content: "\f0d7";
+				padding: 0.5rem;
+				font-family: "Font Awesome 5 Free";
+				font-weight: 900;
+				display: inline-block;
+				transition: 0.32s;
+			}
+
+			&.show {
+				&::after {
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+
+	&__search {
+		&__label {
+			position: relative;
+
+			&::after {
+				cursor: pointer;
+				position: absolute;
+				right: 1.4rem;
+				top: 0;
+				padding-left: 0.5rem;
+				content: "\f002";
+
+				display: inline-block;
+
+				font-family: "Font Awesome 5 Free";
+				color: $color-white;
+				font-weight: 900;
+			}
+		}
+
+		&__input {
+			transition: 0.32s;
+			padding-left: 1.5rem;
+			height: 4rem;
+			width: 23.8rem;
+
+			border: solid 1px $color-cerulean;
+			border-radius: 8px;
+
+			font-family: $font-secondary;
+			color: $color-white;
+			font-size: 1.4rem;
+
+			&::placeholder {
+				color: #{$color-french-pass}66;
+			}
+
+			&:focus {
+				border-width: 2px;
+				border-color: $color-french-pass;
+			}
+		}
+	}
+
+	@include media("<=sm_tablet") {
+		background-color: transparent;
+		margin-top: 0;
+		height: 4.6rem;
+
+		.wrapper {
+			display: none;
+		}
+	}
+}

@@ -26,11 +26,11 @@ $breakpoints: (
 */
 
 $font-primary: "Roboto Slab", sans-serif;
-$font-secundary: "ArcherPro", sans-serif;
+$font-secondary: "ArcherPro", sans-serif;
 $font-tertiary: unset;
 
 $font-title: $font-primary;
-$font-text: $font-secundary;
+$font-text: $font-secondary;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,13 +38,19 @@ $font-text: $font-secundary;
 |--------------------------------------------------------------------------
 */
 
+$color-french-gray: #c4c4c9;
+$color-mercury: #e1e1e1;
 $color-outer-space: #283137;
+$color-tuna: #39393b;
 $color-heavy-metal: #2c3a2f;
+$color-hunter-green: #101912;
 
 $color-pattens-blue: #e2f7ff;
+$color-french-pass: #b2eaff;
 $color-malibu: #71d8ff;
 $color-cerulean: #00aeef;
 $color-bandi-blue: #0089bc;
+$color-regal-blue: #005271;
 $color-blue-whale: #033244;
 
 $color-primary: $color-malibu;
