@@ -48,34 +48,6 @@
 		scroll-behavior: smooth;
 		scroll-snap-type: x mandatory;
 
-		&__action {
-			@include flex(row, center, flex-start, 2rem);
-			margin-bottom: 2.4rem;
-
-			position: sticky;
-			left: 0;
-			top: 0;
-
-			button {
-				@extend %center;
-				height: 2.4rem;
-				width: 2.4rem;
-				background-color: #f3f3f3;
-
-				font-family: "Font Awesome 5 Free";
-				font-weight: 900;
-				border-radius: 100%;
-
-				transition: 0.32s;
-
-				&:hover {
-					transform: scale(1.2);
-					background-color: $color-bandi-blue;
-					color: $color-white;
-				}
-			}
-		}
-
 		&__wrapper {
 			width: max-content;
 			// padding-right: 4rem;
@@ -116,6 +88,46 @@
 		}
 	}
 
+	&__slide__action,
+	&__slide__action-mobile {
+		@include flex(row, center, flex-start, 2rem);
+		margin-bottom: 2.4rem;
+
+		position: sticky;
+		left: 0;
+		top: 0;
+
+		button {
+			@extend %center;
+			height: 2.4rem;
+			width: 2.4rem;
+			background-color: #f3f3f3;
+
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+			border-radius: 100%;
+
+			transition: 0.32s;
+
+			&:hover {
+				transform: scale(1.2);
+				background-color: $color-bandi-blue;
+				color: $color-white;
+			}
+		}
+	}
+
+	&__content-mobile__redirect {
+		@extend %button-primary;
+		display: none;
+		margin-top: 3.2rem;
+		margin-bottom: 6rem;
+	}
+
+	&__slide__action-mobile {
+		display: none;
+	}
+
 	@include media("<=tablet") {
 		&__content {
 			max-width: 42rem;
@@ -138,7 +150,8 @@
 		@include padding-y(2.4rem);
 
 		.wrapper {
-			@include flex(column, center, center, 2.4rem);
+			@include flex(column, center, center);
+			position: relative;
 		}
 
 		&__content {
@@ -155,17 +168,74 @@
 				display: block;
 				width: 138px;
 				height: 15px;
+				background: url("./assets/services_border_mobile.png");
+				background-size: 100% 90%;
+				background-repeat: no-repeat;
+				margin: 1.6rem auto 2.4rem auto;
+			}
+
+			&__redirect {
 				display: none;
 			}
 		}
 
 		&__slide {
-			max-width: 30rem;
+			max-width: 18.9rem;
+			padding-left: 0;
+			overflow: scroll;
+			scroll-snap-type: x mandatory;
 
-			&__action {
-				align-items: center;
-				justify-content: center;
+			&::-webkit-scrollbar {
+				display: none;
 			}
+
+			&__card {
+				width: 18.9rem;
+				height: 20.9rem;
+
+				scroll-snap-align: center;
+
+				&__picture {
+					img {
+						height: 10rem;
+						aspect-ratio: 1/1;
+					}
+				}
+
+				&__text {
+					font-size: 1.2rem;
+					max-width: 15.9rem;
+					display: block;
+					margin: 0 auto;
+				}
+			}
+		}
+
+		&__slide__action-mobile {
+			display: block;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			position: absolute;
+
+			&__previous {
+				left: 3.7rem;
+				position: absolute;
+			}
+
+			&__next {
+				right: 3.7rem;
+				position: absolute;
+			}
+		}
+
+		&__content-mobile__redirect {
+			position: inherit;
+			display: block;
+		}
+
+		&__slide__action {
+			display: none;
 		}
 	}
 }

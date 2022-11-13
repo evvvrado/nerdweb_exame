@@ -1,0 +1,100 @@
+.selection {
+	padding-top: 8rem;
+	padding-bottom: 7.6rem;
+
+	.wrapper {
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 4rem;
+
+		h3 {
+			margin-top: 1rem;
+		}
+	}
+
+	&__slide {
+		scroll-snap-type: x mandatory;
+		&__wrapper {
+			@include flex(row, flex-start, flex-start, 2.4rem);
+		}
+
+		&__card {
+			width: 42.4rem;
+			height: 46.2rem;
+			background-color: $color-outer-space;
+			color: $color-white;
+			font-family: $font-primary;
+			scroll-snap-align: center;
+
+			&__thumbnail {
+				@extend %cover;
+				height: 24.9rem;
+				width: 100%;
+			}
+
+			&__content {
+				padding: 2.4rem 3.6rem;
+			}
+
+			&__title {
+				@include limitText(2.7rem, 1);
+				font-size: 2rem;
+				font-weight: 600;
+			}
+
+			&__text {
+				display: block;
+				margin-top: 1.6rem;
+				margin-bottom: 4rem;
+				color: $color-pattens-blue;
+				font-size: 1.6rem;
+				font-weight: light;
+				@include limitText(6.4rem, 3);
+			}
+
+			&__cta {
+				@extend %anchor-effect;
+
+				font-size: 1.4rem;
+				color: $color-cerulean;
+			}
+		}
+	}
+
+	@include media("<=phone") {
+		&__slide {
+			overflow-x: auto;
+			padding: 1rem;
+
+			&__wrapper {
+				width: max-content;
+			}
+
+			&__card {
+				width: 35.4rem;
+			}
+
+			&::-webkit-scrollbar {
+				height: 0.7rem;
+			}
+
+			/* Track */
+			&::-webkit-scrollbar-track {
+				background: $color-mercury;
+			}
+
+			/* Handle */
+			&::-webkit-scrollbar-thumb {
+				background: var(--scroll-thumb);
+			}
+
+			/* Handle on hover */
+			&::-webkit-scrollbar-thumb:hover {
+				cursor: pointer;
+				background: var(--scroll-hover);
+			}
+		}
+	}
+}

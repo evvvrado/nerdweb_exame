@@ -1,0 +1,58 @@
+.vision {
+	.wrapper {
+		@include padding-y(8.2rem);
+		background-image: url("./assets/vision_background.png");
+		background-size: cover;
+		background-position: center;
+	}
+
+	&__content {
+		padding-left: 11.2rem;
+
+		h2 {
+			color: $color-white;
+		}
+
+		&__text {
+			display: block;
+			margin-top: 2.4rem;
+			max-width: 53.3rem;
+
+			font-size: 1.8rem;
+			font-family: $font-primary;
+			font-weight: 700;
+
+			color: $color-malibu;
+		}
+
+		&__redirect {
+			@extend %button-primary;
+			margin-top: 6rem;
+		}
+	}
+
+	@include media("<=phone") {
+		@include padding-x(0);
+
+		.wrapper {
+			padding: 3.2rem;
+			background-image: url("./assets/vision_background_mobile.png");
+			text-align: center;
+			@include padding-x(0);
+		}
+
+		&__content {
+			max-width: 22rem;
+			padding-left: 0;
+			margin: 0 auto;
+
+			&__text {
+				font-size: 1.2rem;
+			}
+
+			&__redirect {
+				margin-top: 3.2rem;
+			}
+		}
+	}
+}

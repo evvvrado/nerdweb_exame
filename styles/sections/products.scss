@@ -1,0 +1,106 @@
+.products {
+	text-align: center;
+	padding-bottom: 8rem;
+
+	.wrapper {
+	}
+
+	&__title {
+		margin-bottom: 4rem;
+	}
+
+	&__slide {
+		overflow: auto;
+		padding: 2rem;
+		background-color: $color-concrete;
+		scroll-snap-type: x mandatory;
+
+		&__wrapper {
+			@include flex(row, center, flex-start, 2rem);
+			width: max-content;
+		}
+
+		&__card {
+			@extend %center;
+			scroll-snap-align: center;
+			flex-direction: column;
+
+			width: 11rem;
+			height: 13rem;
+			background-color: $color-mercury;
+
+			user-select: none;
+
+			span {
+				text-transform: uppercase;
+				color: $color-tuna;
+				display: block;
+				margin-top: 1.3rem;
+				font-size: 1.4rem;
+				font-family: $font-primary;
+				font-weight: 500;
+			}
+		}
+
+		&::-webkit-scrollbar {
+			height: 0.7rem;
+		}
+
+		/* Track */
+		&::-webkit-scrollbar-track {
+			background: $color-mercury;
+		}
+
+		/* Handle */
+		&::-webkit-scrollbar-thumb {
+			background: var(--scroll-thumb);
+		}
+
+		/* Handle on hover */
+		&::-webkit-scrollbar-thumb:hover {
+			cursor: pointer;
+			background: var(--scroll-hover);
+		}
+	}
+
+	&__cta {
+		margin-top: 4rem;
+		a {
+			@extend %button-primary;
+		}
+	}
+
+	@include media("<=phone") {
+		padding-right: 0;
+
+		.wrapper {
+			padding-right: 0;
+		}
+
+		&__title {
+			padding-right: 3rem;
+			margin-bottom: 1.6rem;
+			h2 {
+				max-width: 16rem;
+				display: block;
+				margin: 0 auto;
+			}
+		}
+
+		&__slide {
+			padding-left: 3.7rem;
+
+			background-color: transparent;
+
+			&__card {
+				scroll-snap-align: start;
+				width: 12.2rem;
+			}
+		}
+
+		&__cta {
+			margin-right: 3rem;
+			margin-top: 3.2rem;
+		}
+	}
+}

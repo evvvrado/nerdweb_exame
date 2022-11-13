@@ -13,6 +13,7 @@
 	}
 
 	&__menu {
+		z-index: z("menu");
 		@include flex(row, flex-start, center);
 		position: absolute;
 		background-color: $color-white;
@@ -78,6 +79,10 @@
 				margin-right: auto;
 				margin-left: auto;
 			}
+		}
+
+		@include media("<=sm_tablet") {
+			display: none;
 		}
 	}
 
