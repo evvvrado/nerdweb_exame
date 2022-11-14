@@ -9,6 +9,11 @@ html h2 {
 	color: $color-heavy-metal;
 	line-height: 120%;
 
+	&:not(:first-child) {
+		opacity: 0;
+		visibility: hidden;
+	}
+
 	i {
 		color: $color-cerulean;
 	}

@@ -1,7 +1,8 @@
+import Title from '../animations/Title.mjs'
+import Block from '../animations/Block.mjs'
 
 export default class Home {
 	constructor() {
-
 		this.id = 'home';
 		this.selector = 'body';
 		this.selectorChildren = {
@@ -11,6 +12,9 @@ export default class Home {
 
 			mobileMenu: '.header__mobile-menu',
 			triggerMobileMenu: ['.header__actions__button-mobile', '.header__mobile-menu__upper__close'],
+
+			animationsTitles: '[data-animation="title"]',
+			animationsBlock: '[data-animation="block"]',
 		}
 	}
 
@@ -30,6 +34,7 @@ export default class Home {
 		})
 
 		this.setEventListeners();
+		this.createAnimations();
 	}
 
 	setEventListeners() {
@@ -53,6 +58,30 @@ export default class Home {
 			})
 		})
 	}
+
+	createAnimations() {
+		this.animations = []
+
+		// Titles
+
+		this.animationsTitles = _.map(this.elements.animationsTitles, (element) => {
+			return new Title({
+				element,
+			})
+		})
+
+		this.animations.push(...this.animationsTitles)
+
+		// Block
+
+		this.animationsBlock = _.map(this.elements.animationsBlock, (element) => {
+			return new Block({
+				element,
+			})
+		})
+
+		this.animations.push(...this.animationsBlock)
+	};
 
 	createSlide() {
 		this.slide = {

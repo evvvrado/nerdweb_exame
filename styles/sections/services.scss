@@ -7,6 +7,8 @@
 	}
 
 	&__content {
+		animation: bottom-fade-in 1 0.32s linear;
+		animation-fill-mode: backwards;
 		max-width: 36rem;
 		width: 100%;
 		position: relative;
@@ -47,6 +49,9 @@
 
 		scroll-behavior: smooth;
 		scroll-snap-type: x mandatory;
+
+		animation: bottom-fade-in 1 0.32s linear 0.3s;
+		animation-fill-mode: backwards;
 
 		&__wrapper {
 			width: max-content;
