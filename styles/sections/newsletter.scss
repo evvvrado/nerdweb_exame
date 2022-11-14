@@ -1,0 +1,99 @@
+.newsletter {
+	margin-bottom: 10.5rem;
+	font-family: $font-primary;
+
+	.wrapper {
+		background-color: $color-concrete;
+		padding: 4.5rem 11.2rem;
+
+		@include flex(row, center, center, 11.2rem);
+	}
+
+	&__content {
+		max-width: 33.2rem;
+
+		&__title {
+			margin-bottom: 1.6rem;
+		}
+
+		&__text {
+			font-weight: 600;
+			font-size: 2rem;
+			color: $color-bandi-blue;
+		}
+	}
+
+	&__form {
+		width: 100%;
+		max-width: 67.2rem;
+
+		form {
+			width: 100%;
+
+			label {
+				width: 100%;
+				display: block;
+
+				input {
+					width: 100%;
+					height: 4.4rem;
+					border: 1px solid $color-regal-blue;
+					margin-bottom: 1.5rem;
+					padding-left: 2.4rem;
+
+					font-size: 1.6rem;
+					font-weight: 300;
+
+					transition: 0.32s;
+
+					&::placeholder {
+						color: $color-regal-blue;
+					}
+
+					&:focus {
+						border-width: 2px;
+					}
+				}
+			}
+
+			button {
+				@extend %button-primary;
+			}
+		}
+	}
+
+	@include media("<=sm_tablet") {
+		&__content {
+			&__text {
+				font-size: 1.2rem;
+			}
+		}
+		.wrapper {
+			flex-direction: column;
+			text-align: center;
+			gap: 1.9rem;
+		}
+	}
+
+	@include media("<=md_phone") {
+		margin-bottom: 6rem;
+
+		.wrapper {
+			padding: 4rem 2rem;
+		}
+
+		&__content {
+			max-width: 22.6rem;
+		}
+
+		&__form {
+			form {
+				label {
+					input {
+						font-size: 1.2rem;
+					}
+				}
+			}
+		}
+	}
+}

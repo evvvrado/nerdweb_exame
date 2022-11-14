@@ -1,0 +1,109 @@
+.selos {
+	@include padding-y(8rem);
+
+	&::before {
+		content: "";
+		position: static;
+		margin: 0 auto;
+		display: block;
+		margin-bottom: 2.8rem;
+
+		width: 100%;
+		max-width: $container-area;
+		height: 4.2rem;
+
+		background: url("./assets/selos_border.png") no-repeat;
+		background-size: 100% auto;
+		background-position: center;
+	}
+
+	.wrapper {
+		@include flex(row, flex-start, space-between);
+		position: relative;
+	}
+
+	&__content {
+		margin-left: 11.2rem;
+		max-width: 53.6rem;
+		font-size: 1.5rem;
+		color: $color-heavy-metal;
+		font-family: $font-primary;
+
+		strong {
+			font-weight: bolder;
+		}
+
+		&__text {
+			display: block;
+			margin-top: 2.5rem;
+		}
+	}
+
+	&__pictures {
+		margin-top: 2.3rem;
+		@include flex(row, center, flex-start, 4.2rem);
+
+		&__selo {
+			aspect-ratio: 1/1;
+			border-radius: 100%;
+		}
+	}
+
+	@include media("<=sm_tablet") {
+		@include padding-y(3.2rem);
+
+		&::before {
+			margin-bottom: 3.2rem;
+		}
+		.wrapper {
+			flex-direction: column;
+		}
+
+		&__content {
+		}
+
+		&__pictures {
+			justify-content: center;
+			margin-top: 3.4rem;
+			width: 100%;
+
+			&__selo {
+				width: 15rem;
+				box-shadow: 0px 3px 6px #00000029;
+				display: block;
+			}
+		}
+	}
+	@include media("<=md_phone") {
+		@include padding-y(3.2rem);
+
+		&::before {
+			margin-bottom: 3.2rem;
+			height: 1.5rem;
+		}
+		.wrapper {
+			flex-direction: column;
+		}
+
+		&__content {
+			max-width: 100%;
+			margin: 0 auto;
+
+			&__text {
+				font-size: 1.2rem;
+			}
+		}
+
+		&__pictures {
+			margin-top: 2.4rem;
+			width: 100%;
+			justify-content: space-between;
+
+			&__selo {
+				width: 8rem;
+				box-shadow: 0px 3px 6px #00000029;
+				display: block;
+			}
+		}
+	}
+}

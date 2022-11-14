@@ -45,6 +45,8 @@
 	position: relative;
 	transition: 0.32s;
 
+	user-select: none;
+
 	&:hover {
 		filter: brightness(1.1);
 

@@ -101,6 +101,8 @@ footer {
 					background-color: $color-hunter-green;
 					margin-bottom: 3.2rem;
 
+					font-size: 1.7rem;
+
 					@include flex(column, center, center);
 				}
 			}
